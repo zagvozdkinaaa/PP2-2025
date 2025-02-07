@@ -3,5 +3,7 @@ def is_palindrome(st):
         if st[i]!=st[len(st)-i-1]:
             return False
     return True
-s=input()
-print (is_palindrome(s))
+
+if __name__ == "__main__":
+    s=input()
+    print (is_palindrome(s))
