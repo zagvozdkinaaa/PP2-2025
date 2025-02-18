@@ -11,7 +11,7 @@ def sec_difference():
     except:
         print("You entered the wrong date format")
 
-    dates_diff=abs(date2-date1)
+    dates_diff=abs(date2 - date1)
     seconds_difference = dates_diff.total_seconds()
     print(seconds_difference)
 sec_difference()
