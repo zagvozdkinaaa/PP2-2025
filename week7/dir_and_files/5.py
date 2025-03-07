@@ -2,7 +2,7 @@ import os
 
 data = []
 n = int(input("Enter the number of items: "))
-for _ in range(n):
+for i in range(n):
     item = input("Enter an item: ")
     data.append(item)
 
