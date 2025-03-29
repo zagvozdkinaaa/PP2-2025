@@ -6,9 +6,9 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
+BLUE = (62, 88, 148)
+GREEN = (152, 186, 87)
+YELLOW = (224, 191, 101)
 GRAY = (200, 200, 200)
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -30,7 +30,7 @@ buttons = {
     "circle": pygame.Rect(190, 10, 80, 30),
     "eraser": pygame.Rect(280, 10, 80, 30),
     "black": pygame.Rect(370, 10, 30, 30),
-    "red": pygame.Rect(410, 10, 30, 30),
+    "yellow": pygame.Rect(410, 10, 30, 30),
     "green": pygame.Rect(450, 10, 30, 30),
     "blue": pygame.Rect(490, 10, 30, 30),
     "increase": pygame.Rect(530, 10, 30, 30),
@@ -43,7 +43,7 @@ def draw_buttons():
     pygame.draw.rect(screen, GRAY, buttons["circle"])
     pygame.draw.rect(screen, GRAY, buttons["eraser"])
     pygame.draw.rect(screen, BLACK, buttons["black"])
-    pygame.draw.rect(screen, RED, buttons["red"])
+    pygame.draw.rect(screen, YELLOW, buttons["yellow"])
     pygame.draw.rect(screen, GREEN, buttons["green"])
     pygame.draw.rect(screen, BLUE, buttons["blue"])
     pygame.draw.rect(screen, GRAY, buttons["increase"])
@@ -73,8 +73,8 @@ while True:
                         mode = btn
                     elif btn == "black":
                         color = BLACK
-                    elif btn == "red":
-                        color = RED
+                    elif btn == "yellow":
+                        color = YELLOW
                     elif btn == "green":
                         color = GREEN
                     elif btn == "blue":
