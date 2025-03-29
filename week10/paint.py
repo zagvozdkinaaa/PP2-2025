@@ -94,11 +94,11 @@ while True:
             drawing = False
             if mode == "rect" and start_pos:
                 end_pos = event.pos
-                pygame.draw.rect(screen, color, (*start_pos, end_pos[0] - start_pos[0], end_pos[1] - start_pos[1]), 2)
+                pygame.draw.rect(screen, color, (*start_pos, end_pos[0] - start_pos[0], end_pos[1] - start_pos[1]), brush_size)
             elif mode == "circle" and start_pos:
                 end_pos = event.pos
                 radius = int(((end_pos[0] - start_pos[0])**2 + (end_pos[1] - start_pos[1])**2)**0.5)
-                pygame.draw.circle(screen, color, start_pos, radius, 2)
+                pygame.draw.circle(screen, color, start_pos, radius, brush_size)
             start_pos = None
         
         if event.type == pygame.MOUSEMOTION and drawing:
